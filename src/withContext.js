@@ -1,16 +1,16 @@
-import React from 'react';
-import Context from './Context';
+import React from 'react'
+import Context from './Context'
 
-const withContext = WrappedComponent => {
-  const WithHOC = props => {
-    return (
-      <Context.Consumer>
-        {context => <WrappedComponent {...props} context={context} />}
-      </Context.Consumer>
-    );
-  };
+const withContext = (WrappedComponent) => {
+	const WithHOC = (props) => {
+		return (
+			<Context.Consumer>
+				{(context) => <WrappedComponent {...props} context={context} />}
+			</Context.Consumer>
+		)
+	}
 
-  return WithHOC;
-};
+	return WithHOC
+}
 
-export default withContext;
+export default withContext
